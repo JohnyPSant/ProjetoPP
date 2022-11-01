@@ -1,0 +1,60 @@
+<?php
+include("config.php");
+include("verifica.php");
+$erro = 0;
+if (isset($_POST['mail'])) {
+    extract($_POST);
+    $consulta = $conexao->query("select * from tb_usuarios where usu_email = '$mail' and usu_senha = '$senha'");
+    if ($resultado = $consulta->fetch_assoc()) {
+        $_SESSION['mail'] = $resultado['usu_email'];
+        $_SESSION['nome'] = $resultado['usu_nome'];
+        $_SESSION['codigo'] = $resultado['usu_id'];
+        $codigo = $resultado['usu_id'];
+        header("Location: inicial.php");
+    } else {
+        $erro = 1;
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <title>Formulário</title>
+</head>
+
+<body>
+
+    <form action="?" method="POST" class="card position-fixed top-1">
+        <div class="card-body">
+            <div class="align-middle">
+                <img src="./assets/img/logo grande.png" alt="">
+            </div>
+            <h5 class="card-title align-center">Acesse sua conta</h5>
+            <div>
+                <label for="">Email</label>
+                <input type="email" name="mail" required>
+            </div>
+            <div class="mt-2">
+                <label for="">Senha</label>
+                <input type="password" name="senha" required>
+            </div>
+            <button type="submit" class="btn btn-primary mt-5">Acessar</button>
+            <?php if ($erro == 1) echo "<br><span align=center style='color:red'>Usuario ou senha inválida, tente novamente.</span><br>"; ?>
+        </div><br>
+        </div>
+        <form>
+            <!-- JavaScript Bundle with Popper -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
