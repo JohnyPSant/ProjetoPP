@@ -33,24 +33,19 @@ if (isset($_POST['mail'])) {
 
 <body>
 
-    <form action="?" method="POST" class="card position-fixed top-1">
-        <div class="card-body">
+    <form action="?" method="POST" class="card px-4 py-4">
             <div class="align-middle">
                 <img src="./assets/img/logo grande.png" alt="">
             </div>
-            <h5 class="card-title align-center">Acesse sua conta</h5>
-            <div>
-                <label for="">Email</label>
-                <input type="email" name="mail" required>
+            <h5 class="card-title align-center mb-5 ">Acesse sua conta</h5>
+            <div class="mb-3 d-flex gap-3">
+                <input placeholder="Email" type="email" class="form-control rounded-5" id="inputEmail">
             </div>
-            <div class="mt-2">
-                <label for="">Senha</label>
-                <input type="password" name="senha" required>
+            <div class="mb-3 d-flex gap-3">
+                <input placeholder="Senha" type="password" class="form-control rounded-5" id="inputSenha">
             </div>
             <button type="submit" class="btn btn-primary mt-5">Acessar</button>
             <?php if ($erro == 1) echo "<br><span align=center style='color:red'>Usuario ou senha inválida, tente novamente.</span><br>"; ?>
-        </div><br>
-        </div>
         <form>
             <!-- JavaScript Bundle with Popper -->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
