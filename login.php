@@ -39,10 +39,17 @@ if (isset($_POST['mail'])) {
             </div>
             <h5 class="card-title align-center mb-5 ">Acesse sua conta</h5>
             <div class="mb-3 d-flex gap-3">
+<<<<<<< HEAD
                 <input placeholder="Email" type="email" class="form-control rounded-5" id="inputEmail" name = "mail">
             </div>
             <div class="mb-3 d-flex gap-3">
                 <input placeholder="Senha" type="password" class="form-control rounded-5" id="inputSenha" name = "senha">
+=======
+                <input placeholder="Email" type="email" class="form-control rounded-5" id="inputEmail">
+            </div>
+            <div class="mb-3 d-flex gap-3">
+                <input placeholder="Senha" type="password" class="form-control rounded-5" id="inputSenha">
+>>>>>>> 57081ce01fd1814c2f67959a55a4c6409faa1b34
             </div>
             <button type="submit" class="btn btn-primary mt-5">Acessar</button>
             <?php if ($erro == 1) echo "<br><span align=center style='color:red'>Usuario ou senha inválida, tente novamente.</span><br>"; ?>
