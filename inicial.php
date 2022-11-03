@@ -29,7 +29,9 @@ if(isset($_SESSION['nome'])){
         <a href="login.php"><button type="button" class="btn btn-warning">Entrar</button></a>
         <a href="cadastro.php"><button type="button" class="btn btn-outline-info">Cadastra-se</button></a>
         <?php }elseif ($var == 1) {?>
-        <a href="logout.php"><button type="button" class="btn btn-warning">Sair</button></a>
+        <a href="logout.php"><button type="button" class="btn btn-danger">Sair</button></a>
+        <a href="doacao.php"><button type="button" class="btn btn-outline-info">Realizar Doação</button></a>
+        <a href="cadastroAnimal.php"><button type="button" class="btn btn-outline-success">Cadastrar Animais</button></a>
         <?php } ?>
     </div>
   </div>

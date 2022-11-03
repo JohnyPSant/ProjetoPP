@@ -37,28 +37,28 @@
                     <img src="./assets/img/logo grande.png" alt="">
                 </div>
               <h5 class="card-title align-center">Cadastre-se</h5>
-              <div class="mb-3">
+              <div class="mb-3 d-flex flex-column">
                     <label for="" >CPF/CNPJ</label>
                     <input type="text" name = "cpf" placeholder="Insira seu CPF" required>
                 </div>
-                <div class="mb-3">
+                <div class="mb-3 d-flex flex-column">
                     <label for="">Nome/empresa</label>
                     <input type="text" name = "nome" placeholder="Insira o nome" required>
                 </div>
-                <div class="mb-3">
+                <div class="mb-3 d-flex flex-column">
                     <label for="">Telefone</label>
                     <input type="tel" name = "tele" placeholder="Insira seu telefone">
                 </div>
-                <div class="mb-3">
+                <div class="mb-3 d-flex flex-column">
                     <label for="">email</label>
                     <input type="email" name = "email" placeholder="Insira seu email" required>
                 </div>
                 
-                <div class="mt-3">
+                <div class="mt-3 d-flex flex-column">
                     <label for="">Senha</label>
                     <input type="password" name = "senha" placeholder="Insira sua senha" required>
                 </div>
-                <div class="mt-3">
+                <div class="mt-3 d-flex flex-column">
                     <label for="">Confirmar senha</label>
                     <input type="password" name = "conf-senha" placeholder="Confirme sua senha" required>
                 </div>
