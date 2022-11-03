@@ -5,10 +5,10 @@ include("verifica2.php");
 if (isset($_POST['enviar'])) {
     extract($_POST);
     if($_REQUEST['doacao'] == "mantimentos"){
-        ($consulta = $conexao->query("INSERT INTO tb_doaçoes (doa_qtd) VALUES ('$qtd');"));
+        ($consulta = $conexao->query("INSERT INTO tb_doacoes (doa_qtd) VALUES ('$qtd');"));
             header("Location: index.php");
     }elseif($_REQUEST['doacao'] == "dinheiro"){
-        ($consulta = $conexao->query("INSERT INTO tb_doaçoes (doa_valor) VALUES ('$valor');"));
+        ($consulta = $conexao->query("INSERT INTO tb_doacoes (doa_valor) VALUES ('$valor');"));
             header("Location: index.php");
     }else{
         echo "Não foi possivel registrar";

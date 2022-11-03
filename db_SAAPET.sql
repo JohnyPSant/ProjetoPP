@@ -9,7 +9,7 @@ create table tb_usuarios (
    usu_senha varchar(100) not null,
    usu_cpf varchar(100) not null,
    usu_tel varchar(100),
-   primary key(usu_id)
+   primary key(usu_codigo)
 )engine=innodb;
 
 create table tb_animais(
@@ -21,22 +21,22 @@ create table tb_animais(
    ani_especie varchar(100) not null,
    ani_sobre varchar(300),
    ani_sexo varchar(50) not null,
-   primary key (ani_id)
+   primary key (ani_codigo)
 )engine=innodb;
 
-create table tb_doaçoes(
+create table tb_doacoes(
    doa_codigo int auto_increment not null,
    doa_qtd int not null,
    doa_valor double not null,
-   doa_usu_id int not null,
-   primary key (doa_id),
-   foreign key (doa_usu_id) references tb_usuarios (usu_id)
+   doa_usu_codigo int not null,
+   primary key (doa_codigo),
+   foreign key (doa_usu_codigo) references tb_usuarios (usu_codigo)
 )engine=innodb;
 
 create table tb_tiposdedoacao(
    tip_codigo int not null auto_increment,
    tip_doa varchar(50) not null,
-   primary key (tip_id)
+   primary key (tip_codigo)
 )engine=innodb;
 
 insert into tb_tiposdedoacao(tip_doa) values ('Mantimentos(Comidas e/ou Remédios)'), ('Dinheiro');
