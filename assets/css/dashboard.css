@@ -1,36 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f5f5f5;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FAFAFA !important;
 }
 
 nav {
-    width: 100%;
-   border-bottom: #f1f1f1 2px solid;
+  width: 100%;
+  background-color: white;
+  border-bottom: #EBEBEB 2px solid;
 }
 
 .cinza-primario {
-  color: #4D5665 ;
+  color: #4D5665;
 }
+
 .cinza-secundario {
-  color: #95AEC3 ;
+  color: #95AEC3;
 }
 
 .btn-primario {
   background-color: #F8914A !important;
-  color: white !important; 
+  color: white !important;
 }
 
 .btn-primario:hover {
@@ -40,18 +42,22 @@ nav {
 .btn-secundario {
   background-color: transparent;
   border: 1px solid #3FC0D3 !important;
-  color: #3FC0D3 !important; 
+  color: #3FC0D3 !important;
 }
 
 .btn-secundario:hover {
   background-color: #3FC0D3 !important;
   border: 1px solid #3FC0D3 !important;
-  color: white !important; 
+  color: white !important;
 }
 
 
 #cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax( 16rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   gap: 24px;
+}
+
+table{
+  background-color: white !important;
 }
