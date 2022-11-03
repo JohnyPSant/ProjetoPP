@@ -4,12 +4,16 @@ include("verifica2.php");
 
 if (isset($_POST['enviar'])) {
     extract($_POST);
-    if ($consulta = $conexao->query("INSERT INTO tb_doacoes (doa_qtd) VALUES ('$qtd');")) {
-        header("Location: index.php");
-    } else {
-        echo "Não foi possivel realizar o cadastro";
+    if($_REQUEST['doacao'] == "mantimentos"){
+        ($consulta = $conexao->query("INSERT INTO tb_doaçoes (doa_qtd) VALUES ('$qtd');"));
+            header("Location: index.php");
+    }elseif($_REQUEST['doacao'] == "dinheiro"){
+        ($consulta = $conexao->query("INSERT INTO tb_doaçoes (doa_valor) VALUES ('$valor');"));
+            header("Location: index.php");
+    }else{
+        echo "Não foi possivel registrar";
     }
-}
+} 
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +34,7 @@ if (isset($_POST['enviar'])) {
 
     <form action="?" method="POST" class="card px-4 py-4">
         <h3 class="text-center mb-5">Faça uma Doação</h3>
-        <select class="form-select rounded-5 mb-3" id="inputDoacao">
+        <select class="form-select rounded-5 mb-3" id="inputDoacao" name = "doacao">
             <option selected value="none">Tipo de Doação</option>
             <option value="mantimentos">Mantimentos(Comida ou Remédios)</option>
             <option value="dinheiro">Dinheiro</option>
