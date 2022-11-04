@@ -26,17 +26,18 @@ create table tb_animais(
 
 create table tb_doacoes(
    doa_codigo int auto_increment not null,
-   doa_qtd int not null,
-   doa_valor double not null,
-   doa_usu_codigo int not null,
-   primary key (doa_codigo),
-   foreign key (doa_usu_codigo) references tb_usuarios (usu_codigo)
+   doa_tipo varchar(100) not null,
+   doa_qtd int,
+   doa_valor double,
+   -- doa_usu_codigo int,
+   primary key (doa_codigo)
+   -- foreign key (doa_usu_codigo) references tb_usuarios (usu_codigo)
 )engine=innodb;
 
-create table tb_tiposdedoacao(
-   tip_codigo int not null auto_increment,
-   tip_doa varchar(50) not null,
-   primary key (tip_codigo)
-)engine=innodb;
+-- create table tb_tiposdedoacao(
+ -- tip_codigo int not null auto_increment,
+ -- tip_doa varchar(50) not null,
+ -- primary key (tip_codigo)
+-- )engine=innodb;
 
-insert into tb_tiposdedoacao(tip_doa) values ('Mantimentos(Comidas e/ou Remédios)'), ('Dinheiro');
+-- insert into tb_tiposdedoacao(tip_doa) values ('Mantimentos(Comidas e/ou Remédios)'), ('Dinheiro');
