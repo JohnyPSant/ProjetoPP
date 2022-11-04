@@ -5,10 +5,10 @@ include("verifica2.php");
 $codigo = $_SESSION['codigo'];
 if (isset($_POST['enviar'])) {
     extract($_POST);
-    if($_REQUEST['doar'] == "mantimentos"){
+    if($_REQUEST['doar'] == "Mantimentos"){
         ($consulta = $conexao->query("INSERT INTO tb_doacoes (doa_qtd, doa_tipo, doa_usu_codigo) VALUES ('$qtd', '$doar', $codigo);"));
             header("Location: agradecimento.php");
-    }elseif($_REQUEST['doar'] == "dinheiro"){
+    }elseif($_REQUEST['doar'] == "Dinheiro"){
         ($consulta = $conexao->query("INSERT INTO tb_doacoes (doa_valor, doa_tipo, doa_usu_codigo) VALUES ('$valor', '$doar', $codigo);"));
             header("Location: agradecimento.php");
     }else{
