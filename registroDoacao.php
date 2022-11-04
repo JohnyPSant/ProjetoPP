@@ -63,9 +63,9 @@ $consulta2 = $conexao->query("select * from tb_usuarios where usu_nome = $codigo
           <tr>
             <td><?php echo $resultado['usu_nome'] ?></td>
             <td><?php echo $resultado['doa_tipo'] ?></td>
-            <td><?php if ($resultado['doa_tipo'] == "Mantimentos") {
+            <td><?php if ($resultado['doa_tipo'] == "mantimentos") {
                   echo $resultado['doa_qtd'];
-                } elseif ($resultado['doa_tipo'] == "Dinheiro") {
+                } elseif ($resultado['doa_tipo'] == "dinheiro") {
                   echo "R$", $resultado['doa_valor'];
                 } ?></td>
           </tr>

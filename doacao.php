@@ -5,10 +5,10 @@ include("verifica2.php");
 $codigo = $_SESSION['codigo'];
 if (isset($_POST['enviar'])) {
     extract($_POST);
-    if($_REQUEST['doar'] == "Mantimentos"){
+    if($_REQUEST['doar'] == "mantimentos"){
         ($consulta = $conexao->query("INSERT INTO tb_doacoes (doa_qtd, doa_tipo, doa_usu_codigo) VALUES ('$qtd', '$doar', $codigo);"));
             header("Location: agradecimento.php");
-    }elseif($_REQUEST['doar'] == "Dinheiro"){
+    }elseif($_REQUEST['doar'] == "dinheiro"){
         ($consulta = $conexao->query("INSERT INTO tb_doacoes (doa_valor, doa_tipo, doa_usu_codigo) VALUES ('$valor', '$doar', $codigo);"));
             header("Location: agradecimento.php");
     }else{
@@ -59,8 +59,8 @@ if (isset($_POST['enviar'])) {
         <h3 class="text-center mb-5 cinza-primario">Faça uma Doação</h3>
         <select class="form-select rounded-5 mb-3" id="inputDoacao" name = "doar">
             <option selected value="none">Tipo de Doação</option>
-            <option value="Mantimentos">Mantimentos(Remédios ou Ração)</option>
-            <option value="Dinheiro">Dinheiro</option>
+            <option value="mantimentos">Mantimentos(Remédios ou Ração)</option>
+            <option value="dinheiro">Dinheiro</option>
         </select>
         <div class="mb-3 d-flex gap-3">
             <div>
