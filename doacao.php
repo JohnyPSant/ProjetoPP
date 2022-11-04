@@ -59,8 +59,8 @@ if (isset($_POST['enviar'])) {
         <h3 class="text-center mb-5 cinza-primario">Faça uma Doação</h3>
         <select class="form-select rounded-5 mb-3" id="inputDoacao" name = "doar">
             <option selected value="none">Tipo de Doação</option>
-            <option value="mantimentos">Mantimentos(Remédios ou Ração)</option>
-            <option value="dinheiro">Dinheiro</option>
+            <option value="Mantimentos">Mantimentos(Remédios ou Ração)</option>
+            <option value="Dinheiro">Dinheiro</option>
         </select>
         <div class="mb-3 d-flex gap-3">
             <div>
