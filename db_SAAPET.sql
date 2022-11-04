@@ -40,4 +40,4 @@ create table tb_doacoes(
  -- primary key (tip_codigo)
 -- )engine=innodb;
 
--- insert into tb_tiposdedoacao(tip_doa) values ('Mantimentos(Comidas e/ou Remédios)'), ('Dinheiro');
+-- insert into tb_tiposdedoacao(tip_doa) values ('Mantimentos(Comidas e/ou Remédios)'), ('Dinheiro')
