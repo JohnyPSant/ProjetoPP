@@ -6,11 +6,11 @@ const inputQuantidade = document.getElementById('inputQuantidade')
 inputDoacao.addEventListener('change', () => {
     const value = inputDoacao.value;
 
-    if (value == "mantimentos") {
+    if (value == "Mantimentos") {
         setDisable(inputValor)
         removeDisable(inputQuantidade)
         inputFocus(inputQuantidade)
-    } else if (value == "dinheiro") {
+    } else if (value == "Dinheiro") {
         setDisable(inputQuantidade)
         removeDisable(inputValor)
         inputFocus(inputValor)
