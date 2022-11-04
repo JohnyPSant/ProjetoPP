@@ -61,10 +61,10 @@ $consulta2 = $conexao->query("select * from tb_usuarios where usu_nome = $codigo
       <tbody>
         <?php while ($resultado = $consulta->fetch_assoc()) { ?>
           <tr>
-            <td><?php echo $resultado['usu_nome'] ?></td>
-            <td><?php echo $resultado['doa_tipo'] ?></td>
+            <td><?php echo ucfirst($resultado['usu_nome']) ?></td>
+            <td><?php echo ucfirst($resultado['doa_tipo']) ?></td>
             <td><?php if ($resultado['doa_tipo'] == "mantimentos") {
-                  echo $resultado['doa_qtd'];
+                  echo $resultado['doa_qtd'], " pacotes";
                 } elseif ($resultado['doa_tipo'] == "dinheiro") {
                   echo "R$", $resultado['doa_valor'];
                 } ?></td>
