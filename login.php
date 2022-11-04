@@ -8,8 +8,8 @@ if (isset($_POST['mail'])) {
     if ($resultado = $consulta->fetch_assoc()) {
         $_SESSION['mail'] = $resultado['usu_email'];
         $_SESSION['nome'] = $resultado['usu_nome'];
-        $_SESSION['codigo'] = $resultado['usu_id'];
-        $codigo = $resultado['usu_id'];
+        $_SESSION['codigo'] = $resultado['usu_codigo'];
+        $codigo = $resultado['usu_codigo'];
         header("Location: inicial.php");
     } else {
         $erro = 1;

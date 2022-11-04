@@ -29,9 +29,9 @@ create table tb_doacoes(
    doa_tipo varchar(100) not null,
    doa_qtd int,
    doa_valor varchar(50),
-   -- doa_usu_codigo int,
-   primary key (doa_codigo)
-   -- foreign key (doa_usu_codigo) references tb_usuarios (usu_codigo)
+   doa_usu_codigo int,
+   primary key (doa_codigo),
+   foreign key (doa_usu_codigo) references tb_usuarios (usu_codigo)
 )engine=innodb;
 
 -- create table tb_tiposdedoacao(

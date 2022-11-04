@@ -2,13 +2,14 @@
 include("config.php");
 include("verifica2.php");
 
+$codigo = $_SESSION['codigo'];
 if (isset($_POST['enviar'])) {
     extract($_POST);
     if($_REQUEST['doar'] == "mantimentos"){
-        ($consulta = $conexao->query("INSERT INTO tb_doacoes (doa_qtd, doa_tipo) VALUES ('$qtd', '$doar');"));
+        ($consulta = $conexao->query("INSERT INTO tb_doacoes (doa_qtd, doa_tipo, doa_usu_codigo) VALUES ('$qtd', '$doar', $codigo);"));
             header("Location: agradecimento.php");
     }elseif($_REQUEST['doar'] == "dinheiro"){
-        ($consulta = $conexao->query("INSERT INTO tb_doacoes (doa_valor, doa_tipo) VALUES ('$valor', '$doar');"));
+        ($consulta = $conexao->query("INSERT INTO tb_doacoes (doa_valor, doa_tipo, doa_usu_codigo) VALUES ('$valor', '$doar', $codigo);"));
             header("Location: agradecimento.php");
     }else{
         echo "Não foi possivel registrar";
