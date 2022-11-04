@@ -2,7 +2,9 @@
 include("config.php");
 
 $codigo = $_SESSION['codigo'];
+$codigo2 = $_SESSION['nome'];
 $consulta = $conexao->query("select * from tb_doacoes join tb_usuarios on doa_usu_codigo = usu_codigo where usu_codigo = $codigo");
+$consulta2 = $conexao->query("select * from tb_usuarios where usu_nome = $codigo2");
 
 ?>
 
@@ -59,8 +61,7 @@ $consulta = $conexao->query("select * from tb_doacoes join tb_usuarios on doa_us
       <tbody>
         <?php while ($resultado = $consulta->fetch_assoc()) { ?>
           <tr>
-            <td><?php echo $resultado['doa_usu_codigo'] ?>
-            <td>
+            <td><?php echo $resultado['usu_nome'] ?></td>
             <td><?php echo $resultado['doa_tipo'] ?></td>
             <td><?php if ($resultado['doa_tipo'] == "mantimentos") {
                   echo $resultado['doa_qtd'];
