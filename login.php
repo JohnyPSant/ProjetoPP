@@ -35,7 +35,7 @@ if (isset($_POST['mail'])) {
 
     <form action="?" method="POST" class="card px-4 py-4">
         <div class="align-middle">
-            <img src="./assets/img/logo grande.png" alt="">
+            <img src="./assets/img/Logo_2.png" alt="">
         </div>
         <h5 class="card-title align-center mb-5 ">Acesse sua conta</h5>
         <div class="mb-3 d-flex gap-3">

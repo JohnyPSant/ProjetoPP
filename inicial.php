@@ -23,7 +23,7 @@ if(isset($_SESSION['nome'])){
 
 <body>
   <div class="position-fixed top-0 d-flex justify-content-between align-items-center" style="width:100%; padding:10px 24px; backgroun-color:red;">
-    <img src="/assets/img/logo medio.png" alt="" alt="">
+    <img src="/assets/img/Logo_2.png" alt="" alt="">
     <div>
         <?php if ($var == 0) {?>
         <a href="login.php"><button type="button" class="btn btn-warning">Entrar</button></a>

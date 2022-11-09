@@ -34,7 +34,7 @@
         <form action = "?" method = "POST" class="card position-fixed top-1">
             <div class="card-body">
                 <div class="align-middle">
-                    <img src="./assets/img/logo grande.png" alt="">
+                    <img src="./assets/img/Logo_2.png" alt="">
                 </div>
               <h5 class="card-title align-center">Cadastre-se</h5>
               <div class="mb-3 d-flex flex-column">
