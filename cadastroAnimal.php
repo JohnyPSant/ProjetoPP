@@ -57,11 +57,6 @@ if(isset($_POST['nome'])){
                 <input placeholder="Porte" class="form-control rounded-5" id="inputPorte" name = "porte">
             </div>
         </div>
-        <div class="mb-3">
-            <label for="inputSexo" class="form-label">Adicione uma foto</label>
-            <input type="file" accept="image/png,image/jpeg" class="form-control rounded-5" id="inputFile">
-              
-        </div>
         <div  class="mb-3">
             <textarea class="form-control" placeholder="Sobre" id="floatingTextarea2" style="height: 100px" name = "sobre"></textarea>
           </div>

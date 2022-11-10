@@ -5,13 +5,20 @@ $erro = 0;
 if (isset($_POST['mail'])) {
     extract($_POST);
     $consulta = $conexao->query("select * from tb_usuarios where usu_email = '$mail' and usu_senha = '$senha'");
-    if ($resultado = $consulta->fetch_assoc()) {
+    $login_admin = $conexao->query("select * from tb_usuarios where usu_email = '$mail' and usu_senha = '$senha' and usu_codigo = 1");
+    if ($resultado = $login_admin->fetch_assoc()) {
+        $_SESSION['mail'] = $resultado['usu_email'];
+        $_SESSION['nome'] = $resultado['usu_nome'];
+        $_SESSION['codigo'] = $resultado['usu_codigo'];
+        $codigo = $resultado['usu_codigo'];
+        header("Location: admin.php");
+    } elseif($resultado = $consulta->fetch_assoc()){
         $_SESSION['mail'] = $resultado['usu_email'];
         $_SESSION['nome'] = $resultado['usu_nome'];
         $_SESSION['codigo'] = $resultado['usu_codigo'];
         $codigo = $resultado['usu_codigo'];
         header("Location: inicial.php");
-    } else {
+    }else{
         $erro = 1;
     }
 }

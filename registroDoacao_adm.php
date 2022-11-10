@@ -2,9 +2,9 @@
 include("config.php");
 
 $codigo = $_SESSION['codigo'];
-$codigo2 = $_SESSION['nome'];
-$consulta = $conexao->query("select * from tb_doacoes join tb_usuarios on doa_usu_codigo = usu_codigo where usu_codigo = $codigo");
-$consulta2 = $conexao->query("select * from tb_usuarios where usu_nome = $codigo2");
+
+$consulta = $conexao->query("select * from tb_doacoes join tb_usuarios on doa_usu_codigo = usu_codigo");
+
 
 ?>
 
@@ -25,17 +25,17 @@ $consulta2 = $conexao->query("select * from tb_usuarios where usu_nome = $codigo
 <body>
   <nav class="navbar navbar-expand-lg position-fixed top-0">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.php"><img src="./assets/img/Logo_2.png" alt=""></a>
+      <a class="navbar-brand" href="admin.php"><img src="./assets/img/Logo_2.png" alt=""></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="./dashboard.php">Inicio</a>
+            <a class="nav-link " aria-current="page" href="./dashboard_adm.php">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="./registroDoacao.php">Minhas Doações</a>
+            <a class="nav-link active" href="./registroDoacao_adm.php">Minhas Doações</a>
           </li>
 
         </ul>

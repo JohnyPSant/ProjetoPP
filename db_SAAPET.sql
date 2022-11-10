@@ -15,7 +15,7 @@ create table tb_usuarios (
 create table tb_animais(
    ani_codigo int auto_increment not null,
    ani_nome varchar(50) not null,
-   ani_idade int not null,
+   ani_idade varchar(50) not null,
    ani_raça varchar(100) not null,
    ani_porte varchar(100) not null,
    ani_especie varchar(100) not null,

@@ -3,8 +3,15 @@ include("config.php");
 
 $codigo2 = $_SESSION['nome'];
 $consulta = $conexao->query("select * from tb_animais");
-
-
+if(isset($_GET['excluir'])){
+	$codigo = $_GET['excluir'];
+	if($consulta2 = $conexao->query("delete from tb_animais where ani_codigo = $codigo")){
+		header("Location: dashboard_adm.php");
+	}
+	else {
+		echo "Não foi possível excluir!";
+	}
+}
 ?>
 
 <!DOCTYPE html>
@@ -25,21 +32,21 @@ $consulta = $conexao->query("select * from tb_animais");
 <body>
   <nav class="navbar navbar-expand-lg position-fixed top-0">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.php"><img src="./assets/img/Logo_2.png" alt=""></a>
+      <a class="navbar-brand" href="admin.php"><img src="./assets/img/Logo_2.png" alt=""></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active " aria-current="page" href="./dashboard.php">Inicio</a>
+            <a class="nav-link active " aria-current="page" href="./dashboard_adm.php">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="./registroDoacao.php">Minhas Doações</a>
+            <a class="nav-link " href="./registroDoacao_adm.php">Doações Registradas</a>
           </li>
   
         </ul>
-        <a href="./doacao.php">
+        <a href="./doacao_adm.php">
           <button class="btn btn-secundario rounded-5">Quero Doar</button>
         </a>
       </div>
@@ -68,7 +75,8 @@ $consulta = $conexao->query("select * from tb_animais");
             <td><?php echo ucfirst ($resultado['ani_porte'])?></td>
             <td><?php echo ucfirst ($resultado['ani_sexo'])?></td>
             <td><?php echo ucfirst ($resultado['ani_sobre'])?></td>
-            <td><a href="?">Adotar</a></td>
+            <td><a href="atualizarAnimal.php?codigo=<?php echo $resultado['ani_codigo'];?>">Editar</a></td>
+            <td><a href="?excluir=<?php echo $resultado['ani_codigo']?>">Excluir</a></td>
           </tr>
         <?php } ?>
 

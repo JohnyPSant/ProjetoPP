@@ -29,7 +29,8 @@ if(isset($_SESSION['codigo'])){
         <a href="login.php"><button type="button" class="btn btn-warning">Entrar</button></a>
         <a href="cadastro.php"><button type="button" class="btn btn-outline-info">Cadastra-se</button></a>
         <?php }elseif ($var == 1) {?>
-        <a href="dashboard.php"><button type="button" class="btn btn-outline-success">Página do usuário</button></a>
+        <a href="dashboard_adm.php"><button type="button" class="btn btn-outline-success">Página do usuário</button></a>
+        <a href="cadastroAnimal.php"><button type="button" class="btn btn-outline-info">Cadastrar Animais</button></a>
         <a href="logout.php"><button type="button" class="btn btn-danger">Sair</button></a>
         <?php } ?>
     </div>
@@ -45,7 +46,7 @@ if(isset($_SESSION['codigo'])){
                     <p class="mt-2">Ache seu pet</p>
                 </div>
                 <p>Visite nosso site ou Aplicativo com espaço dedicado à cuidados aos animais. 
-                    Lá você irá conhecer o espaço perfeito para manutenção de doações e/ou adoções de pets.</p>
+                    Lá você irá conhecer o espaço perfeito para manutenção de doações e/ou adoções de pets. </p>
             </div>
             <div>
                 <div class="d-flex flex-column  align-items-center">
