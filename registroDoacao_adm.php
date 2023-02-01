@@ -35,7 +35,7 @@ $consulta = $conexao->query("select * from tb_doacoes join tb_usuarios on doa_us
             <a class="nav-link " aria-current="page" href="./dashboard_adm.php">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="./registroDoacao_adm.php">Minhas Doações</a>
+            <a class="nav-link active" href="./registroDoacao_adm.php">Doações Registradas</a>
           </li>
 
         </ul>

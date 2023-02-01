@@ -60,6 +60,7 @@ if(isset($_GET['excluir'])){
         <tr>
           <th scope="col">Nome</th>
           <th scope="col">Idade</th>
+          <th scope="col">Espécie</th>
           <th scope="col">Raça</th>
           <th scope="col">Porte</th>
           <th scope="col">Sexo</th>
@@ -71,6 +72,7 @@ if(isset($_GET['excluir'])){
           <tr>
             <td><?php echo ucfirst($resultado['ani_nome']) ?></td>
             <td><?php echo ucfirst($resultado['ani_idade']) ?></td>
+            <td><?php echo ucfirst($resultado['ani_especie']) ?></td>
             <td><?php echo ucfirst ($resultado['ani_raça'])?></td>
             <td><?php echo ucfirst ($resultado['ani_porte'])?></td>
             <td><?php echo ucfirst ($resultado['ani_sexo'])?></td>

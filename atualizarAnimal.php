@@ -5,7 +5,7 @@ $codigo = $_GET['codigo'];
 if(isset($_POST['nome'])){
 	extract($_POST);
 	if($edit = $conexao->query("update tb_animais set ani_nome = '$nome', ani_idade = '$idade', ani_raça = '$raça', ani_porte = '$porte', ani_especie = '$especie', ani_sobre = '$sobre', ani_sexo = '$sexo' where ani_codigo = $codigo;")) {
-		header("Location: dashboard.php");
+		header("Location: dashboard_adm.php");
 	} else {
 		echo "Não foi possivel fazer o registro";
 	}

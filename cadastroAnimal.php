@@ -4,7 +4,7 @@ include("verifica2.php");
 if(isset($_POST['nome'])){
  extract($_POST);
  if($consulta = $conexao -> query("INSERT INTO tb_animais (ani_nome, ani_idade, ani_raça, ani_porte, ani_especie, ani_sobre, ani_sexo) VALUES ('$nome', '$idade', '$raça', '$porte', '$especie', '$sobre', '$sexo');")){
-     header('Location: index.php');
+     header('Location: admin.php');
  }
  else{
      echo "Não foi possivel fazer o registro";

@@ -7,10 +7,10 @@ if (isset($_POST['enviar'])) {
     extract($_POST);
     if($_REQUEST['doar'] == "mantimentos"){
         ($consulta = $conexao->query("INSERT INTO tb_doacoes (doa_qtd, doa_tipo, doa_usu_codigo) VALUES ('$qtd', '$doar', $codigo);"));
-            header("Location: agradecimento.php");
+            header("Location: agradecimento_adm.php");
     }elseif($_REQUEST['doar'] == "dinheiro"){
         ($consulta = $conexao->query("INSERT INTO tb_doacoes (doa_valor, doa_tipo, doa_usu_codigo) VALUES ('$valor', '$doar', $codigo);"));
-            header("Location: agradecimento.php");
+            header("Location: agradecimento_adm.php");
     }else{
         echo "Não foi possivel registrar";
     }
@@ -45,11 +45,11 @@ if (isset($_POST['enviar'])) {
             <a class="nav-link" aria-current="page" href="./dashboard_adm.php">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="./registroDoacao_adm.php">Minhas Doações</a>
+            <a class="nav-link " href="./registroDoacao_adm.php">Doações Registradas</a>
           </li>
   
         </ul>
-        <a href="./doacao.php">
+        <a href="./doacao_adm.php">
           <button class="btn btn-secundario rounded-5">Quero Doar</button>
         </a>
       </div>
