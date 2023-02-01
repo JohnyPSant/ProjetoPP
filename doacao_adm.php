@@ -55,7 +55,7 @@ if (isset($_POST['enviar'])) {
       </div>
     </div>
   </nav>
-    <form action="doacao.php" method="POST" class="card px-4 py-4">
+    <form action="doacao_adm.php" method="POST" class="card px-4 py-4">
         <h3 class="text-center mb-5 cinza-primario">Faça uma Doação</h3>
         <select class="form-select rounded-5 mb-3" id="inputDoacao" name = "doar">
             <option selected value="none">Tipo de Doação</option>
