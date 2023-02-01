@@ -39,7 +39,7 @@ $consulta = $conexao->query("select * from tb_doacoes join tb_usuarios on doa_us
           </li>
 
         </ul>
-        <a href="./doacao.php">
+        <a href="./doacao_adm.php">
           <button class="btn btn-secundario rounded-5">Quero Doar</button>
         </a>
 
